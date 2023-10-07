@@ -1,0 +1,42 @@
+/*del pixel 0px al 1260px le vamos a aplicar los siguientes estilos*/
+@media (max-width: 1260px){
+    .wrap{/*menu y cajas del header*/
+        width: 90%;
+        margin: 0 auto;/*por si algo para que se centre la caja. */
+    }
+
+    #banner h1{
+        font-size: 35px;
+        text-align: center;
+        margin: 30px auto;
+    }
+    .card{
+        width: 17%;
+        margin: 1.4%;
+    }
+    .card p{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    #articles {
+        width: 65%;
+    }
+    #articles article{
+        width: 97%;
+    }
+    #footer .wrap > div {
+        width: 24%;
+    }
+    #images-footer #browsers img{
+        width: 15%;
+    }
+    #footer h5{
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 1110px){
+
+}
