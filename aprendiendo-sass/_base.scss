@@ -1,0 +1,85 @@
+/*Codigo para compilar el archivo estilos.scss*/
+/*sass --watch estilos.scss styles.css*/
+
+
+/*Variables*/
+$fuente-tipica: sans-serif, helvetica, arial;
+$color-fondo: #ccc;
+$color-letra: red;
+$color-secundario: green;
+body{
+    background-color: $color-fondo;
+}
+
+h1{
+    font-family: $fuente-tipica;
+    color: $color-letra;
+}
+
+p{
+    color: $color-secundario;
+}
+/*Anidacion*/
+
+.caja{
+    border: 2px solid black;
+    width: 500px;
+    margin: 0px auto;
+    text-align: center;
+    background-color: white;
+    padding:10px;
+    h1{
+        color: blue;
+    }
+    p{
+        color: grey;
+    }
+    .info{
+        font-size: 10px;
+        .author{
+            font-size: 15px;
+            color: green;
+        }
+    }
+}
+/*modulos*/
+/*para ver como funcionan los modulos debemos ir al archivo stilos.scss*/
+
+/*funciones o mixins - conjunto de instrucciones a ejecutar*/
+@mixin crearBordes($color, $size, $shadow){
+    border: $size solid $color;
+    border-radius: $size;
+    box-shadow: 0px 0px $size $shadow;
+}
+.caja{
+    @include crearBordes(red, 10px, black);
+}
+
+.listado{
+    @include crearBordes(green, 20px, blue);
+}
+
+//herencia
+//puedo heredar los estilos basico como por ejemplo los de alert-normal pero tambien puedo poner mis propios estilos como en el ejemplo de .alert-danger dond hay un color rojo
+%alert-normal{
+    border: 1px solid blue;
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    width: 80%;
+    margin: 20px auto;
+}
+.alert{
+    @extend %alert-normal;
+}
+
+.alert-danger{
+    @extend %alert-normal;
+    color: red;
+    border: 1px solid red;
+}
+.alert-success{
+    @extend %alert-normal;
+    color: green;
+    border: 1px solid red;
+}

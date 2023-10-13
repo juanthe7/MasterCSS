@@ -1,0 +1,79 @@
+/*modulos*/
+/*Codigo para compilar el archivo estilos.scss*/
+/*sass --watch estilos.scss styles.css*/
+/*Variables*/
+body {
+  background-color: #ccc;
+}
+
+h1 {
+  font-family: sans-serif, helvetica, arial;
+  color: red;
+}
+
+p {
+  color: green;
+}
+
+/*Anidacion*/
+.caja {
+  border: 2px solid black;
+  width: 500px;
+  margin: 0px auto;
+  text-align: center;
+  background-color: white;
+  padding: 10px;
+}
+.caja h1 {
+  color: blue;
+}
+.caja p {
+  color: grey;
+}
+.caja .info {
+  font-size: 10px;
+}
+.caja .info .author {
+  font-size: 15px;
+  color: green;
+}
+
+/*modulos*/
+/*para ver como funcionan los modulos debemos ir al archivo stilos.scss*/
+/*funciones o mixins - conjunto de instrucciones a ejecutar*/
+.caja {
+  border: 10px solid red;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px black;
+}
+
+.listado {
+  border: 20px solid green;
+  border-radius: 20px;
+  box-shadow: 0px 0px 20px blue;
+}
+
+.alert-success, .alert-danger, .alert {
+  border: 1px solid blue;
+  background-color: #000;
+  color: white;
+  padding: 10px;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.alert-danger {
+  color: red;
+  border: 1px solid red;
+}
+
+.alert-success {
+  color: green;
+  border: 1px solid red;
+}
+
+h1 {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=styles.css.map */
